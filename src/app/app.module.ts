@@ -3,12 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { AgGridModule } from 'ag-grid-angular/main';
+import { HeaderGroupComponent } from './header-group.component';
+import { GridComponent } from './grid.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GridComponent,
+    HeaderGroupComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AgGridModule.withComponents([
+      HeaderGroupComponent
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
